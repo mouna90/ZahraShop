@@ -1,0 +1,61 @@
+{% extends "admin.html.twig" %}
+{% block body %}
+<div class="row">
+    <div class="col-xs-6 col-sm-3">
+        {{ include('admin/navigation.html.twig') }}
+    </div>
+    <div class="col-md-6">
+
+    <h1>Produits</h1>
+
+    <table class="table table-bordered">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ produit.id }}</td>
+            </tr>
+            <tr>
+                <th>Name</th>
+                <td>{{ produit.name }}</td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>{{ produit.description }}</td>
+            </tr>
+            <tr>
+                <th>Prix</th>
+                <td>{{ produit.prix }}</td>
+            </tr>
+            <tr>
+                <th>Disponible</th>
+                <td>{{ produit.disponible }}</td>
+            </tr>
+            <tr>
+                <th>Cayegoryid</th>
+                <td>{{ produit.categoryId }}</td>
+            </tr>
+            <tr>
+                <th>Imageid</th>
+                <td>{{ produit.imageId }}</td>
+            </tr>
+            <tr>
+                <th>Tvaid</th>
+                <td>{{ produit.tvaId }}</td>
+            </tr>
+            <tr>
+                <td><a href="{{ path('produits_index') }}"><span class="glyphicon glyphicon-arrow-left" aria-hidden="true">RETOUR</span></a>
+                </td>
+                <td>
+                   <a href="{{ path('produits_edit', { 'id': produit.id }) }}"><span class="glyphicon glyphicon-pencil"></span>Editer</a> 
+                </td>
+                <td>
+                    {{ form_start(delete_form) }}
+                       <input class="btn btn-danger" type="submit" value="Delete">
+                    {{ form_end(delete_form) }}
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+</div>
+{% endblock %}

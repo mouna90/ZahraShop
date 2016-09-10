@@ -1,0 +1,49 @@
+{% extends "admin.html.twig" %}
+{% block body %}
+<div class="row">
+    <div class="col-xs-6 col-sm-3">
+        {{ include('admin/navigation.html.twig') }}
+    </div>
+    <div class="col-md-6">
+  
+    <h1>Liste des produits</h1>
+    <a href="{{ path('produits_new') }}">
+    <span class="glyphicon glyphicon-plus">
+        Creer un nouveau produits  
+    </span></a>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Prix</th>
+                <th>Disponible</th>
+                <th>Cayegoryid</th>
+                <th>Imageid</th>
+                <th>Tvaid</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for produit in produits %}
+            <tr>
+                <td><a href="{{ path('produits_show', { 'id': produit.id }) }}">{{ produit.id }}</a></td>
+                <td>{{ produit.name }}</td>
+                <td>{{ produit.description }}</td>
+                <td>{{ produit.prix }}</td>
+                <td>{{ produit.disponible }}</td>
+                <td>{{ produit.categoryId }}</td>
+                <td>{{ produit.imageId }}</td>
+                <td>{{ produit.tvaId }}</td>
+                <td> 
+                <a href="{{ path('produits_show', { 'id': produit.id }) }}">voire</a>      
+                <a href="{{ path('produits_edit', { 'id': produit.id }) }}">Editer</a>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+ </div>
+</div>
+{% endblock %}

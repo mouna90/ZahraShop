@@ -1,0 +1,54 @@
+{% extends "admin.html.twig" %}
+{% block body %}
+<div class="row">
+    <div class="col-xs-6 col-sm-3">
+        {{ include('admin/navigation.html.twig') }}
+    </div>
+    <div class="col-md-6">
+     <h1>Produits creation</h1>
+    <div class="panel panel-default">
+    <div class="panel-body">
+
+    {{ form_start(form) }}
+        <div class="form-group">
+            {{ form_label(form.name) }}
+            {{ form_widget(form.name, {'attr': {'class':'form-control' }}) }}
+        </div>
+        <div class="form-group">
+            {{ form_label(form.description) }}
+            {{ form_widget(form.description, {'attr': {'class':'form-control' }}) }}
+        </div>
+        <div class="form-group">
+            {{ form_label(form.prix) }}
+            {{ form_widget(form.prix, {'attr': {'class':'form-control' }}) }}
+        </div>
+        <div class="form-group">
+            {{ form_label(form.disponible) }}
+            {{ form_widget(form.disponible, {'attr': {'class':'form-control' }}) }}
+        </div>
+        <div class="form-group">
+            {{ form_label(form.categoryId) }}
+            {{ form_widget(form.categoryId, {'attr': {'class':'form-control' }}) }}
+        </div>
+        <div class="form-group">
+            {{ form_label(form.imageId) }}
+            {{ form_widget(form.imageId, {'attr': {'class':'form-control' }}) }}
+        </div>
+        <div class="form-group">
+            {{ form_label(form.tvaId) }}
+            {{ form_widget(form.tvaId, {'attr': {'class':'form-control' }}) }}
+        </div>
+    {{ form_widget(form) }}
+        <input class="btn btn-primary" type="submit" value="Create" />
+    {{ form_end(form) }}
+
+    <ul>
+        <li>
+            <a href="{{ path('produits_index') }}">Revenir à la liste principale</a>
+        </li>
+    </ul>
+    </div>
+    </div>
+</div>
+</div>
+{% endblock %}
