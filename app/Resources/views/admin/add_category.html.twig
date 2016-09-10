@@ -1,0 +1,31 @@
+{% extends "admin.html.twig" %}
+{% block body %}
+<div class="row">
+    <div class="col-xs-6 col-sm-3">
+    {{ include('admin/navigation.html.twig') }}
+     </div>
+     <div class="col-md-6">
+     <h3>Ajouter une categorie</h3>
+     <div class="panel panel-default">
+     <div class="panel-body">
+       <form method="post">
+		  <div class="form-group">
+		    <label for="name">Nom de Categorie</label>
+		    <input type="text" class="form-control" id="name" placeholder="Nom">
+		  </div>
+		  <div class="form-group">
+		    <label for="url">url</label>
+		    <input type="text" class="form-control" id="url" placeholder="url">
+		  </div>
+		  <div class="form-group">
+		    <label for="exampleInputFile">File input</label>
+		    <input type="file" id="exampleInputFile">
+		    <p class="help-block">Example block-level help text here.</p>
+		  </div>
+		  <button type="submit" class="btn btn-default">Submit</button>
+		</form>
+    </div>
+    </div>
+    </div>
+</div>
+{% endblock %}

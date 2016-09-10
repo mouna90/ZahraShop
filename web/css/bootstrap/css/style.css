@@ -1,0 +1,32 @@
+.menu{
+	width: 100%;
+}
+.menu li{
+	float: left;
+	margin: 25px;
+	list-style: none;
+	color: #000;
+	size: 15px;
+}
+.connexion{
+	width: 100px;
+	float: right;
+}
+.glyphicon-shopping-cart{
+color: #4bcaff;
+width: 100px;
+float: right;
+}
+.logo{
+	width: 200px;
+	font-size: 20px;
+	color: #4bcaff; 
+}
+.barhaute{
+}
+
+.voire{
+	width: 100px;
+	margin: 20px;
+	border: solid #fff 1px;
+}

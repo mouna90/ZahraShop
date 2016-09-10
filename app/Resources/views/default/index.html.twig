@@ -1,0 +1,13 @@
+{% extends "::base.html.twig" %}
+{% block body %}
+    <div class="wrapper">
+         {{ include('front/layout/navigation.html.twig')}}
+         <div class="container">
+            {{ include('front/layout/slide.html.twig')}}
+
+            {{ include('front/layout/categories.html.twig')}}
+
+            {{ include('front/layout/footer.html.twig')}}
+         </div>
+    </div>
+{% endblock %}
